@@ -5,6 +5,8 @@ import CssBaseLine from '@material-ui/core/CssBaseline';
 
 import Aux from '../Aux/Aux';
 import ToolbarComponent from '../../components/Navigation/ToolbarComponent/ToolbarComponent';
+import Main from '../../containers/Main/Main';
+import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -21,16 +23,26 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
         padding: theme.spacing(3),
     },
+    topMargin: {
+        marginTop: 100,
+    }
 }));
 
-const Layout = () => {
+const Layout = (props) => {
     const classes= useStyles();
 
     return (
         <Aux>
             <div className={classes.root}>
                 <CssBaseLine />
-                <ToolbarComponent />
+                <ToolbarComponent className={classes.toolbar} />
+                <SideDrawer />
+                <div className={classes.topMargin}>
+                    <Main className={classes.content}>
+                        <div className={classes.toolbar} />
+                        {props.children}
+                    </Main>
+                </div>
             </div>
         </Aux>
     );
