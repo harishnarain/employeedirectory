@@ -57,12 +57,17 @@ const Employees = (props) => {
   const [query, setQuery] = useState("");
 
   const debouncedQuery = useDebounce(query, 500);
+  
+  const results = props.employees.filter(employee => employee.displayName.toLowerCase().startsWith(query.toLowerCase()));
+  console.log(results);
 
   useEffect(() => {
-    onFetchEmployees("search", debouncedQuery);
+    if (!query) {
+      onFetchEmployees("search", debouncedQuery);
+    }
     
     // eslint-disable-next-line
-  }, [onFetchEmployees, debouncedQuery]);
+  }, [onFetchEmployees]);
 
   const handleRefreshEmployees = () => {
     onFetchEmployees("search");
@@ -87,7 +92,7 @@ const Employees = (props) => {
 
   const emptyRows =
     rowsPerPage -
-    Math.min(rowsPerPage, props.employees.length - page * rowsPerPage);
+    Math.min(rowsPerPage, results.length - page * rowsPerPage);
 
   let employees = null;
   let loading = null;
@@ -99,7 +104,7 @@ const Employees = (props) => {
   if (!props.loading) {
     employees = (
       <TableBody>
-        {stableSort(props.employees, getComparator(order, orderBy))
+        {stableSort(results, getComparator(order, orderBy))
           .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
           .map((employee, index) => {
             const labelId = `enhanced-table-checkbox-${index}`;
@@ -151,7 +156,7 @@ const Employees = (props) => {
               order={order}
               orderBy={orderBy}
               onRequestSort={handleRequestSort}
-              rowCount={props.employees.length}
+              rowCount={results.length}
             />
             {employees}
           </Table>
@@ -159,7 +164,7 @@ const Employees = (props) => {
         <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
-          count={props.employees.length}
+          count={results.length}
           rowsPerPage={rowsPerPage}
           page={page}
           onChangePage={handleChangePage}
