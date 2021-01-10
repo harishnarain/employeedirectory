@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   table: {
-    minWidth: 750,
+    minWidth: 800,
   },
   visuallyHidden: {
     border: 0,
@@ -181,8 +181,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onFetchEmployees: (token, queryType, query) =>
-      dispatch(actions.fetchEmployees(token, queryType, query)),
+    onFetchEmployees: (queryType, query) =>
+      dispatch(actions.fetchEmployees(queryType, query)),
     onClearEmployeeState: () => dispatch(actions.clearEmployeeState()),
   };
 };

@@ -10,7 +10,7 @@ const headCells = [
   {
     id: "thumbnail",
     numeric: false,
-    disablePadding: true,
+    disablePadding: false,
     label: "Image",
   },
   {

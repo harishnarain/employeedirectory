@@ -7,8 +7,8 @@ import Aux from "../../../hoc/Aux/Aux";
 const employee = (props) => {
   return (
     <Aux>
-      <TableCell component="th" id={props.labelId} scope="row" padding="none">
-        {props.thumbnail}
+      <TableCell component="th" id={props.labelId} scope="row" padding="default">
+        <img src={props.thumbnail} alt="employee-thumbnail"></img>
       </TableCell>
       <TableCell align="left" padding="none">
         {props.displayName}

@@ -5,7 +5,6 @@ import CssBaseLine from '@material-ui/core/CssBaseline';
 
 import Aux from '../Aux/Aux';
 import ToolbarComponent from '../../components/Navigation/ToolbarComponent/ToolbarComponent';
-import Main from '../../containers/Main/Main';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 
 const useStyles = makeStyles(theme => ({
@@ -38,10 +37,10 @@ const Layout = (props) => {
                 <ToolbarComponent className={classes.toolbar} />
                 <SideDrawer />
                 <div className={classes.topMargin}>
-                    <Main className={classes.content}>
+                    <main className={classes.content}>
                         <div className={classes.toolbar} />
                         {props.children}
-                    </Main>
+                    </main>
                 </div>
             </div>
         </Aux>

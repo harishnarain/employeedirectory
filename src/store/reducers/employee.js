@@ -13,7 +13,7 @@ const fetchEmployeesStart = (state, action) => {
 
 const fetchEmployeesSuccess = (state, action) => {
   return updateObject(state, {
-    users: action.employees,
+    employees: action.employees,
     loading: false,
   });
 };
