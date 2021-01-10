@@ -59,7 +59,6 @@ const Employees = (props) => {
   const debouncedQuery = useDebounce(query, 500);
   
   const results = props.employees.filter(employee => employee.displayName.toLowerCase().startsWith(query.toLowerCase()));
-  console.log(results);
 
   useEffect(() => {
     if (!query) {
