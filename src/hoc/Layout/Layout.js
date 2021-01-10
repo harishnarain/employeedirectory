@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseLine from '@material-ui/core/CssBaseline';
 
 import Aux from '../Aux/Aux';
+import ToolbarComponent from '../../components/Navigation/ToolbarComponent/ToolbarComponent';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -29,7 +30,7 @@ const Layout = () => {
         <Aux>
             <div className={classes.root}>
                 <CssBaseLine />
-                <h1>Placeholder</h1>
+                <ToolbarComponent />
             </div>
         </Aux>
     );

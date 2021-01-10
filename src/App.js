@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 
-import logo from './logo.svg';
 import Layout from './hoc/Layout/Layout';
 
 function App() {
