@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Employee Directory - Yet another employee directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+For this assignment, we create a employee directory with React. This assignment will require the app's UI to be separated into components, manage component state, and respond to user events.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Employee Directory - Yet another employee directory](#employee-directory---yet-another-employee-directory)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Features](#features)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Screenshots](#screenshots)
+  - [Questions](#questions)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this GitHub repository
 
-### `npm test`
+   ```
+   git@github.com:harishnarain/employeedirectory.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install all dependent npm packages
 
-### `npm run build`
+   ```
+   npm install --save
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Run the development server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. If deploying to a hosting platform follow the instructions of that platform for deploying React apps
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Click on Employees from the side drawer
+2. Navigate the pagination
+3. Run a filtered search by typing terms in the search input
+4. To generate another random list click the "refresh employees" button
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A demo of the application is available at: https://aqueous-anchorage-40595.herokuapp.com/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Separate route for /employees
+- Debounced search queries
+- Enhanced pagination with ability to select rows per page
+- Refresh Employees button to generate a new list
+- Shared state management with Redux
+- Asynchronous data fetching provided by Redux-Saga
+- Using purely functional components and React Hooks
+- Using Material-UI
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project uses the MIT license
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Pull requests are welcome
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
 
-### Analyzing the Bundle Size
+**Home Page**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Screenshot1](https://github.com/harishnarain/employeedirectory/blob/master/Screenshot1.PNG?raw=true)
+![Screenshot2](https://github.com/harishnarain/employeedirectory/blob/master/Screenshot2.PNG?raw=true)
 
-### Making a Progressive Web App
+## Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Checkout my GitHub [profile](https://github.com/harishnarain)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please feel free to email at: <harishnarain@gmail.com>
