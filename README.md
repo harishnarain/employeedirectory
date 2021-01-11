@@ -70,8 +70,8 @@ Pull requests are welcome
 
 **Home Page**
 
-![Screenshot1](https://github.com/harishnarain/employeedirectory/blob/master/Screenshot1.PNG?raw=true)
-![Screenshot2](https://github.com/harishnarain/employeedirectory/blob/master/Screenshot2.PNG?raw=true)
+![Screenshot1](https://github.com/harishnarain/employeedirectory/blob/main/Screenshot1.PNG?raw=true)
+![Screenshot2](https://github.com/harishnarain/employeedirectory/blob/main/Screenshot2.PNG?raw=true)
 
 ## Questions
 
