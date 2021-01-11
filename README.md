@@ -51,6 +51,7 @@ A demo of the application is available at: https://aqueous-anchorage-40595.herok
 
 - Separate route for /employees
 - Debounced search queries
+- Sorting in ascending or descending order
 - Enhanced pagination with ability to select rows per page
 - Refresh Employees button to generate a new list
 - Shared state management with Redux
